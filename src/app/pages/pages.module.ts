@@ -2,6 +2,10 @@ import { NgModule } from "@angular/core";
 
 // MODULOS
 import { SahredModule } from '../shared/shared.module';
+import { FormsModule } from "@angular/forms";
+
+// NG2 Charts
+import { ChartsModule } from 'ng2-charts';
 
 // RUTAS
 import { PAGES_ROUTES } from './pages.routes';
@@ -10,6 +14,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { PagesComponent } from './pages.component';
+import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+
+// Temporal
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 
 @NgModule({
     declarations: [
@@ -17,6 +25,8 @@ import { PagesComponent } from './pages.component';
         DashboardComponent,
         ProgressComponent,
         Graficas1Component,
+        IncrementadorComponent,
+        GraficoDonaComponent
     ],
     // Por si se requires estos modulos en otro componente
     exports: [
@@ -26,7 +36,9 @@ import { PagesComponent } from './pages.component';
     ],
     imports: [
         SahredModule,
-        PAGES_ROUTES
+        PAGES_ROUTES,
+        FormsModule,
+        ChartsModule
     ]
 })
 
